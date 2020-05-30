@@ -6,4 +6,4 @@ urlpatterns = [
     path('app0530/', views.create, name="newblog"),
     path('update/<int:pk>', views.update, name="update"),
     path('delete/<int:pk>', views.delete, name="delete"),
-]
+] 

@@ -6,19 +6,6 @@ from .forms import NewBlog
 def home(request):
     blogs = Blog.objects
     return render(request, 'home.html', {'blogs':blogs})
-'''
-def newblog(request):
-    if request.method == 'POST':
-        form = NewBlog(request.POST)
-        if form.is_valid:
-            post = form.save(commit=False)
-            post.pub_date = timezone.now()
-            post.save()
-            return redirect('home')
-    else:
-        form = NewBlog()
-        return render(request, 'funcrud.html', {'form':form})
-'''
 
 def read(request):
     blogs = Blog.objects.all()
